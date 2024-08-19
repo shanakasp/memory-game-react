@@ -1,0 +1,73 @@
+.memory-game-container {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.countdown-timer {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.selection-countdown {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: red;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.card-back {
+  background-color: #007bff;
+  transform: rotateY(180deg);
+}
+
+.new-game-button {
+  margin-top: 20px;
+  font-size: 18px;
+  color: blue;
+  cursor: pointer;
+}
